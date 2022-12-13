@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.toggle {
+  background: transparent;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  transition: all 150ms ease-out;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+  color: var(--color-accent);
+}
+
+.filters {
+  display: flex;
+}
+
+.filter {
+  margin: 0.3rem;
+  background-color: transparent;
+  opacity: 0.8;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--color-accent);
+}
+
+.filter:hover,
+.filter.selected {
+  opacity: 1;
+}
+
+.filter.selected::after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+  border: 1px solid var(--color-white);
+}
