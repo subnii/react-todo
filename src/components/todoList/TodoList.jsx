@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./TodoList.module.css";
 import { BiTrashAlt } from "react-icons/bi";
+import { getLocalStorage, setLocalStorage } from "../../utils/storage";
 
 function Todo({ todo, statusHandler, removeHandler }) {
   const { id, text, status } = todo;
@@ -68,7 +69,7 @@ const filterList = (todoList, filter) => {
 };
 
 function TodoList({ filter }) {
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(getLocalStorage("todoList") || []);
 
   const addHandler = (inputText) => {
     setTodoList([...todoList, { id: todoList.length, text: inputText, status: "Active" }]);
@@ -81,6 +82,10 @@ function TodoList({ filter }) {
   const removeHandler = (id) => {
     setTodoList(todoList.filter((todo) => todo.id !== id));
   };
+
+  useEffect(() => {
+    setLocalStorage("todoList", todoList);
+  }, [todoList]);
 
   return (
     <section className={styles.container}>
