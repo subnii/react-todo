@@ -9,7 +9,7 @@
 
 .toggle {
   background: transparent;
-  color: var(--color-white);
+  color: var(--color-text);
   font-size: 1.5rem;
   transition: all 150ms ease-out;
   cursor: pointer;
@@ -43,5 +43,5 @@
   content: "";
   display: block;
   margin-top: 0.2rem;
-  border: 1px solid var(--color-white);
+  border: 1px solid var(--color-text);
 }

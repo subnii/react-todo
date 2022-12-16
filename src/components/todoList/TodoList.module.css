@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   min-height: 0;
-  background-color: var(--color-bg-dark);
+  background-color: var(--color-bg);
 }
 
 .list {
@@ -30,13 +30,13 @@
   flex: 1 1 0%;
   margin-left: 0.5rem;
   font-size: 1.2rem;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .del {
   background-color: transparent;
   font-size: 1.2rem;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .del:hover {
@@ -68,7 +68,7 @@
   border-bottom-right-radius: 8px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--color-white);
+  color: var(--color-text);
   cursor: pointer;
 }
 
