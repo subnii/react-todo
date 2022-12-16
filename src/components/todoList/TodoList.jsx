@@ -19,11 +19,11 @@ function Todo({ todo, statusHandler, removeHandler }) {
       <input
         className={styles.checkbox}
         type="checkbox"
-        id="checkbox"
+        id={id}
         checked={status === "Completed"}
         onChange={checkboxHandler}
       />
-      <label htmlFor="checkbox" className={styles.text}>
+      <label htmlFor={id} className={styles.text}>
         {text}
       </label>
       <button className={styles.del} onClick={buttonHandler}>
@@ -72,7 +72,7 @@ function TodoList({ filter }) {
   const [todoList, setTodoList] = useState(getLocalStorage("todoList") || []);
 
   const addHandler = (inputText) => {
-    setTodoList([...todoList, { id: todoList.length, text: inputText, status: "Active" }]);
+    setTodoList([...todoList, { id: Date.now(), text: inputText, status: "Active" }]);
   };
 
   const statusHandler = (id, status) => {

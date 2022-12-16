@@ -36,9 +36,9 @@ code {
 }
 
 #root {
-  width: 100%;
+  width: 90%;
   height: 60%;
-  max-width: 500px;
+  max-width: 480px;
   background-color: var(--color-bg-dark);
   overflow: hidden;
   border-radius: 1rem;
